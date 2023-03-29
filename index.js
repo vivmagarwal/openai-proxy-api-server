@@ -30,7 +30,7 @@ const openaiProxy = createProxyMiddleware({
   pathRewrite: { "^/openai-chat": "/v1/chat/completions" },
   headers: {
    "Content-Type": "application/json",
-    Authorization: `Bearer ${process.env.OPENAI_API_KEY}`,
+    Authorization: `Bearer ${process.env.REACT_APP_OPENAI_SECRET}`,
   },
 });
 
